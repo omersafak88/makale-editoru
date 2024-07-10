@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="tr" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by ömer şafak</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makale Yazma Editörü</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <button class="tablink" onclick="openMainPage()">Anasayfa</button>
+        <button class="tablink" onclick="openPage('A')">A</button>
+<button class="tablink" onclick="openPage('B')">B</button>
+<button class="tablink" onclick="openPage('C')">C</button>
+<button class="tablink" onclick="openPage('Ç')">Ç</button>
+<button class="tablink" onclick="openPage('D')">D</button>
+<button class="tablink" onclick="openPage('E')">E</button>
+<button class="tablink" onclick="openPage('F')">F</button>
+<button class="tablink" onclick="openPage('G')">G</button>
+<button class="tablink" onclick="openPage('H')">H</button>
+<button class="tablink" onclick="openPage('I')">I</button>
+<button class="tablink" onclick="openPage('İ')">İ</button>
+<button class="tablink" onclick="openPage('J')">J</button>
+<button class="tablink" onclick="openPage('K')">K</button>
+<button class="tablink" onclick="openPage('L')">L</button>
+<button class="tablink" onclick="openPage('M')">M</button>
+<button class="tablink" onclick="openPage('N')">N</button>
+<button class="tablink" onclick="openPage('O')">O</button>
+<button class="tablink" onclick="openPage('Ö')">Ö</button>
+<button class="tablink" onclick="openPage('P')">P</button>
+<button class="tablink" onclick="openPage('R')">R</button>
+<button class="tablink" onclick="openPage('S')">S</button>
+<button class="tablink" onclick="openPage('Ş')">Ş</button>
+<button class="tablink" onclick="openPage('T')">T</button>
+<button class="tablink" onclick="openPage('U')">U</button>
+<button class="tablink" onclick="openPage('Ü')">Ü</button>
+<button class="tablink" onclick="openPage('V')">V</button>
+<button class="tablink" onclick="openPage('Y')">Y</button>
+<button class="tablink" onclick="openPage('Z')">Z</button>
+<button class="tablink" onclick="openPage('0')">0</button>
+<button class="tablink" onclick="openPage('1')">1</button>
+<button class="tablink" onclick="openPage('2')">2</button>
+<button class="tablink" onclick="openPage('3')">3</button>
+<button class="tablink" onclick="openPage('4')">4</button>
+<button class="tablink" onclick="openPage('5')">5</button>
+<button class="tablink" onclick="openPage('6')">6</button>
+<button class="tablink" onclick="openPage('7')">7</button>
+<button class="tablink" onclick="openPage('8')">8</button>
+<button class="tablink" onclick="openPage('9')">9</button>
+
+    </div>
+    <div id="main-page" class="main-content">
+        <div class="editor-toolbar">
+            <button onclick="execCmd('bold')"><b>B</b></button>
+            <button onclick="execCmd('italic')"><i>I</i></button>
+            <button onclick="execCmd('underline')"><u>U</u></button>
+            <button onclick="execCmd('insertOrderedList')">OL</button>
+            <button onclick="execCmd('insertUnorderedList')">UL</button>
+            <button onclick="execCmd('formatBlock', '<h1>')">H1</button>
+            <button onclick="execCmd('formatBlock', '<h2>')">H2</button>
+            <select onchange="execCmd('fontName', this.value)">
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Times New Roman, serif">Times New Roman</option>
+                <option value="Courier New, monospace">Courier New</option>
+                <!-- Diğer yazı tipleri buraya eklenebilir -->
+            </select>
+            <select onchange="execCmd('fontSize', this.value)">
+                <option value="1">10px</option>
+                <option value="2">13px</option>
+                <option value="3">16px</option>
+                <option value="4">18px</option>
+                <option value="5">24px</option>
+                <!-- Diğer yazı boyutları buraya eklenebilir -->
+            </select>
+        </div>
+        <div id="editor" contenteditable="true"></div>
+        <input type="text" id="article-title" placeholder="Makale Adı">
+        <button onclick="saveArticle()">Kaydet</button>
+    </div>
+    <!-- Harf ve rakam sekmeleri burada yer alacak -->
+    <div id="K" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="L" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="M" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="N" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="O" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="Ö" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="P" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="R" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="S" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="Ş" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="T" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="U" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="Ü" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="V" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="Y" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="Z" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="0" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="1" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="2" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="3" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="4" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="5" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="6" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="7" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="8" class="main-content"><div class="side-tabs">
+</div>
+</div>
+<div id="9" class="main-content"><div class="side-tabs">
+</div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
